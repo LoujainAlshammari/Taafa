@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 class ConsultationVC: UIViewController  {
 
-    @IBOutlet weak var nameDrLabel: UILabel!
     
   let   durations = ["30 دقيقة",
                           "45 دقيقة",
@@ -34,8 +33,6 @@ class ConsultationVC: UIViewController  {
     let datePiicker = UIDatePicker()
     let timePiicker = UIDatePicker()
     
-//    var apptArray : [Appointment] = []
-
     let db = Firestore.firestore()
     var namee = ""
     
@@ -46,15 +43,9 @@ class ConsultationVC: UIViewController  {
         pickerDuration.delegate = self
         pickerDuration.dataSource = self
         pickerDuration.tag = 1
-
-
-        
         createDatePicker()
         createTimePicker()
         
-//        nameDrLabel.text = namee
-//        nameDrLabel.textColor = .red
-//        print(namee + "++++++++++++++++++++")
         
     }
     @IBAction func durationButtonAct(_ sender: Any) {
@@ -149,14 +140,7 @@ class ConsultationVC: UIViewController  {
                 "duration" : self.duration,
                 "time": self.timeTex.text!,
                 "date" :self.dateTex.text!
-                 ]
-            )
-//            db.collection("Appointment").addDocument(data: [
-//            "id":Auth.auth().currentUser!.uid,
-//            "duration" : self.duration,
-//            "time": self.timeTex.text!,
-//            "date" :self.dateTex.text!,
-//        ])
+                 ])
     }
     }
     

@@ -20,7 +20,6 @@ class ChattingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("#########",drsObj!.idDr)
         tableView.delegate = self
         tableView.dataSource = self
         getMessage()
@@ -53,18 +52,6 @@ class ChattingVC: UIViewController {
     func getMessage(){
            
         
-//                let name = db.collection("Patient").document(myId!)
-//                name.getDocument { user, error in
-//                    if let error = error{
-//                        print(error)
-//                    }else{
-//                        if Auth.auth().currentUser?.uid == user?.get("id") as? String{
-//                       /// self.myName = user?.get("Name") as! String
-//                        }
-//                        print("###########")
-//                        print(self.myName)
-//                    }
-//                }
         
         
         db.collection("Patient").document(myId!)

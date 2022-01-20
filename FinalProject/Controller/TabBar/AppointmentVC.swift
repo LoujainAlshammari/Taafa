@@ -12,9 +12,7 @@ class AppointmentVC: UIViewController {
 
     let db = Firestore.firestore()
     let userID = Auth.auth().currentUser?.uid
-//    @IBOutlet weak var durationSession: UILabel!
-//    @IBOutlet weak var timeSession: UILabel!
-//    @IBOutlet weak var dateSession: UILabel!
+
     
     
     @IBOutlet weak var taableView: UITableView!
@@ -47,28 +45,6 @@ class AppointmentVC: UIViewController {
                                     self.taableView.reloadData()
                                 }
                             }
-                            
-                            
-                            
-//                                .getDocuments { [self] (qurySnapshot, error) in
-//                                    if let error = error {
-//                                        print(error)
-//                                    }else{
-//
-//                                        for doc in qurySnapshot!.documents {
-//                                            let data = doc.data()
-//                                            let durationSession = data["duration"] as? String ?? ""
-//                                            let timeSession = data["time"] as? String ?? ""
-//                                            let dateSession  = data ["date"] as? String ?? ""
-//                                            if (doc.get("id")as? String ?? "nil") == (qurSnapShot?.get("id") as? String ?? "nil"){
-//                                                self.apptArray.append(Appointment(id: "", duration: durationSession, time: timeSession, date: dateSession))
-//
-//                                                print("loginnnnnnnnnn",self.apptArray)
-//                                            }
-//                                            self.taableView.reloadData()
-//                                        }
-//                                    }
-//                                }
                         }
                     }
             }

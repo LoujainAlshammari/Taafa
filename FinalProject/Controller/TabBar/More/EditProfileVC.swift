@@ -34,7 +34,6 @@ class EditProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        getDataFromFireBasePt()
         
         pickerWeight.isHidden = true
         pickerHeight.isHidden = true
@@ -95,10 +94,7 @@ class EditProfileVC: UIViewController {
             "weight" : self.selectedWeight,
             "gender" : self.selectedGender]
         
-            // db.collection("Patient").document().whereField("id", isEqualTo: Auth.auth().currentUser!.uid)
-        
-        
-      //  let newData = ["imag" : dataImqge]
+           
         db.collection("Patient").whereField("id", isEqualTo: Auth.auth().currentUser!.uid as Any).getDocuments { [self] (result, error) in
                             if error == nil{
                                 for document in result!.documents{
@@ -107,58 +103,8 @@ class EditProfileVC: UIViewController {
                                 }
                             }
                         }
-        
-        
-        
-//        db.collection("Patient").document(Auth.auth().currentUser!.uid).updateData([
-//
-//            "id":Auth.auth().currentUser!.uid,
-//            "height" : self.selectedHeigt,
-//            "weight" : self.selectedWeight,
-//            "gender" : self.selectedGender
-//
-//        ]){error in
-//            if error == nil {
-//                print("Successful")
-//                let pt = Patient(id: "", ptName: "", ptEmail: "", gender: self.selectedGender,
-//                                 height: self.selectedHeigt, weight: self.selectedWeight)
-//                self.ptArray.append(pt)
-//
-//            }else {
-//                print("Eror")
-//            }
-//        }
-//
     }
     
-//    func getDataFromFireBasePt(){
-//        print(Auth.auth().currentUser!.uid)
-//        db.collection("Patient").whereField("ptEmail", isEqualTo: Auth.auth().currentUser!.email!).addSnapshotListener { QuerySnapshot, error in
-//            if let error = error{
-//                print(error)
-//            }
-//            else{
-//                for doc in QuerySnapshot!.documents{
-//                let data = doc.data()
-////                let namePt = data["ptName"] as? String ?? ""
-////                let emailPt = data["ptEmail"] as? String ?? ""
-//                let id = data["id"] as? String? ?? ""
-//
-////                self.nameProfile.text = namePt
-////                self.emailProfile.text = emailPt
-//
-////                let newData = ["name" : namePt, "email" : emailPt,"gender": self.selectedGender, "weight" : self.selectedWeight, "heigt" : self.selectedHeigt]
-////                self.db.collection("Patient").document(Auth.auth().currentUser!.uid).setData(newData , merge: true)
-//
-//                let newData = ["gender": self.selectedGender, "weight" : self.selectedWeight, "heigt" : self.selectedHeigt]
-//                self.db.collection("Patient").document(Auth.auth().currentUser!.uid).setData(newData , merge: true)
-//
-//
-//            }
-//            }
-//
-//        }
-//    }
 
 }
 

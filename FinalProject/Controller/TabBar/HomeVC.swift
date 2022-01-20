@@ -42,19 +42,15 @@ extension HomeVC:  UITableViewDelegate , UITableViewDataSource  {
         
         if index == 0 {
             
-//            let selectedObject = titles[indexPath.row]
             let nextVC = storyboard?.instantiateViewController(withIdentifier: "doctor") as! DoctorsVC
-//            nextVC?.idd = drArray[indexPath.row].id
             present(nextVC, animated: true, completion: .none)
         
         } else if index == 1 {
             
-//            let selectedObject = titles[indexPath.row]
             let nextVC = storyboard?.instantiateViewController(withIdentifier: "drVC") as! DrVC
             present(nextVC, animated: true, completion: .none)
             
         }else{
-//            let selectedObject = titles[indexPath.row]
             let next = storyboard?.instantiateViewController(withIdentifier: "nextVC") as? NutritionClinics
             present(next!, animated: true, completion: .none)
             

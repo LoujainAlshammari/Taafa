@@ -13,10 +13,4 @@ struct Clinics{
     var nutritionistsName: String?
     var location :String
    
-//    init( clinicName:String , nutritionistsName:String ,location:String){
-//        self.clinicName = clinicName
-//        self.nutritionistsName = nutritionistsName
-//        self.location = location
-//       
-//    }
 }

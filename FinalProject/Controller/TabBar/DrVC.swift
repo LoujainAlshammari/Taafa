@@ -29,19 +29,18 @@ class DrVC: UIViewController {
         
         db.collection("Nutritionist")
             .getDocuments { QuerySnapshot, error in
-            
-                    for document in QuerySnapshot!.documents{
-                        //                    QuerySnapshot?.documents.forEach({ QueryDocumentSnapshot in
-                        let data = document.data()
-                        print(document.data())
-                        let nameDoctor = data ["drName"] as? String ?? " notFound "
-                        print("############",nameDoctor)
-                        let id = data ["id"] as? String ?? " notFound "
-                        self.drsArray.append(SelectDrs(idDr: id, nameDr: nameDoctor))
-                        self.tableView.reloadData()
-                        
-                    }
+                
+                for document in QuerySnapshot!.documents{
+                    let data = document.data()
+                    print(document.data())
+                    let nameDoctor = data ["drName"] as? String ?? " notFound "
+                    print("############",nameDoctor)
+                    let id = data ["id"] as? String ?? " notFound "
+                    self.drsArray.append(SelectDrs(idDr: id, nameDr: nameDoctor))
+                    self.tableView.reloadData()
                     
+                }
+                
                 
             }
     }

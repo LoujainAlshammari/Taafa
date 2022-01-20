@@ -33,32 +33,7 @@ class DetailsDrVC: UIViewController {
     
   
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "moveToCons" {
-//            let vc = ConsultationVC()
-//            vc.namee = name.text!
-//        } else {
-//            print("errorrrrrrrrrrr")
-//        }
-//    }
-    
-    
-//    func getDataFromFireBase(){
-//        print(Auth.auth().currentUser!.uid)
-//        db.collection("Nutritionist").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).addSnapshotListener { QuerySnapshot, error in
-//            if let error = error{
-//                print(error)
-//            }
-//            else{
-//                for doc in QuerySnapshot!.documents{
-//                    let data = doc.data()
-//                    let imgStr = data ["icon"] as? Data ?? Data()
-//                    self.imageProfile.image = UIImage(data: imgStr)
-//                }
-//            }
-//        }
-//    }
+
     
   
     
@@ -69,26 +44,14 @@ class DetailsDrVC: UIViewController {
     }
     
     @IBAction func clickToBooking(_ sender: Any) {
-//        self.performSegue(withIdentifier: "moveConsultationVC", sender: nil)
-//        passData()
+
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "moveConsultationVC")
                 vc!.modalPresentationStyle = .fullScreen
                self.present(vc!, animated: true, completion: nil)
 
     }
     
-//    func passData() {
-//        let data = name.text
-//        db.collection("PassTheData").addDocument(data: ["doctorName" : data])
-//        { error in
-//            if error == nil {
-//                print(error)
-//            } else {
-//                print("good job")
-//            }
-//
-//        }
-//    }
+
     
     
   

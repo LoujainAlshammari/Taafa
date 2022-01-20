@@ -84,7 +84,6 @@ class CreateAccountDr: UIViewController {
     
     @IBAction func createButton(_ sender: Any) {
         checkUserDr()
-       // uploadDataToFireBase()
        
     }
     

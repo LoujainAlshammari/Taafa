@@ -69,48 +69,7 @@ class DoctorProfileVC: UIViewController {
     func getDataFromFireBase(){
         print(Auth.auth().currentUser!.uid)
         db.collection("Nutritionist").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).addSnapshotListener { QuerySnapshot, error in
-            //                       if let error = error {
-            //                           print(error.localizedDescription)
-            //                QuerySnapshot?.documents.forEach({ QueryDocumentSnapshot in
-            //
-            //                    let nameDoctor : String = ((QueryDocumentSnapshot.get("drName")as? String)!)
-            //
-            //                    let emailDoctor : String = ((QueryDocumentSnapshot.get("email")as? String)!)
-            //
-            //                    let  imgStr  : Data = ((QueryDocumentSnapshot.get("icon")as? Data) ?? Data())
-            //
-            //                    let gender : String = ((QueryDocumentSnapshot.get("gender")as? String)!)
-            //
-            //                    let certificationDr : String = ((QueryDocumentSnapshot.get("certification")as? String)!)
-            //
-            //                    let expDoctor : String = ((QueryDocumentSnapshot.get("experience")as? String)!)
-            //
-            //                    let desDoctor : String = ((QueryDocumentSnapshot.get("description")as? String)!)
-            //
-            //                    let costDoctor : String = ((QueryDocumentSnapshot.get("cost")as? String)!)
-            //
-            //                    let bankNameDr: String = ((QueryDocumentSnapshot.get("bankName")as? String)!)
-            //
-            //                    let iban: String = ((QueryDocumentSnapshot.get("iban")as? String)!)
-            //
-            //
-            //                    self.nameDr.text = nameDoctor
-            //                    self.emailDr.text = emailDoctor
-            //                    self.gender.text = gender
-            //                    self.certificationDr.text = certificationDr
-            //                    self.experienceDr.text = expDoctor
-            //                    self.textArea.text = desDoctor
-            //                    self.cost.text = costDoctor
-            //                    self.bankName.text = bankNameDr
-            //                    self.ibanDr.text = iban
-            //                    self.imgProfile.image = UIImage(data: imgStr)
-            //                    //                               self.imgProfile.image = imgStr
-            //                    //                               self.getImage(imgStr: imgStr)
-            //
-            //                    //                               self.drInfo.append(Doctor(id: "", drName: nameDoctor, email: emailDoctor, icon:imgStr, certification: certificationDr,
-            //                    //                                                          experience: certificationDr, description: desDoctor, cost: costDoctor, bankName: bankNameDr))
-            //                })
-            
+           
             if let error = error{
                 print(error)
             }
@@ -149,54 +108,7 @@ class DoctorProfileVC: UIViewController {
         
     }
     
-    
-    //    if let snapshotDocuments = querySnapshot?.documents {
-    //                            for doc in snapshotDocuments {
-    //                                let data = doc.data()
-    //                                let phone = data["phoneNumnber"] as? String ?? ""
-    //                                let firstName = data["firstName"] as! String
-    //                                let isVerified = data["isVerified"] as? Bool ?? false
-    //                                self.username.text = firstName
-    //                                self.email.text = Auth.auth().currentUser!.email
-    //                                let profilePic = data["image"] as! Data
-    //                                if isVerified{
-    //                                    self.verfied.image = UIImage(systemName: "star.circle.fill") ?? UIImage()
-    //                                }
-    
-    
-    
-    //    func getData() {
-    //
-    //
-    //        if let userId = userId {
-    //            db.collection("Nutritionist").document(userId).getDocument{ documentSnapshot, error in
-    //                if let error = error {
-    //                    print("Error: ",error.localizedDescription)
-    //                } else{
-    ////                    for doc in snapshotDocuments {
-    ////                        let data = doc.data()
-    //                    self.nameDr.text = documentSnapshot?.get("drName") as? String ?? "nil"
-    ////                    self.emailDr.text = data("email") as? String ?? "nil"
-    ////                    self.gender.text = documentSnapshot?.get("gender") as? String ?? "nil"
-    ////                    self.certificationDr.text = data("certification") as? String ?? "nil"
-    ////                    self.experienceDr.text = data("experience") as? String ?? "nil"
-    ////                    self.textArea.text = data("description") as? String ?? "nil"
-    ////                    self.cost.text = data("cost") as? String ?? "nil"
-    ////                    self.bankName.text = data("bankName") as? String ?? "nil"
-    //
-    //                    let imgStr = documentSnapshot?.get("icon") as? String ?? "nil"
-    ////                        if isVerified{
-    //                            self.imgProfile.image = UIImage(systemName: "star.circle.fill") ?? UIImage()
-    ////                        }
-    //
-    ////                    self.getImage(imgStr: imgStr)
-    ////                }
-    //            }
-    //        }
-    //    }
-    //    }
-    
-    
+      
     func uploadImage(){
         let imagefolder = Storage.storage().reference().child("images")
         if let imageData = imgProfile.image?.jpegData(compressionQuality: 0.1) {

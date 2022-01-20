@@ -54,21 +54,6 @@ class HomePageDrVC: UIViewController {
     
     
     
-//    func getUsersFromeFireBase(){
-//        db.collection("Messages").getDocuments() { qer , err in
-//            if err == nil {
-//                qer?.documents.forEach({ QueryDocumentSnapshot in
-//                    let id : String = (QueryDocumentSnapshot.get("id") as? String)!
-//                    let sender : String = (QueryDocumentSnapshot.get("sender") as? String)!
-//                    let message : String = (QueryDocumentSnapshot.get("message") as? String)!
-//                    self.usersArray.append(Message(idM: id, sender: sender, message: message, receiver: ""))
-//                    self.tableView.reloadData()
-//                })
-//            }else {
-//                print(err!.localizedDescription)
-//            }
-//        }
-//    }
     
 }
 

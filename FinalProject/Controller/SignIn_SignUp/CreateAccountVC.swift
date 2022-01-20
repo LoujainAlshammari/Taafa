@@ -27,7 +27,6 @@ class CreateAccountVC: UIViewController , UITextFieldDelegate {
     @IBAction func createButton(_ sender: Any) {
         
         checkUserPt()
-    //    uploadDataToFireBasePt()
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePage")
                 vc!.modalPresentationStyle = .fullScreen
                self.present(vc!, animated: true, completion: nil)
@@ -43,8 +42,7 @@ class CreateAccountVC: UIViewController , UITextFieldDelegate {
     }
      
     @IBAction func moveToPageDr(_ sender: Any) {
-//        let vc = nutritionistProfileVC()
-//        present(vc, animated: true, completion: nil)
+
         
         let second = self.storyboard?.instantiateViewController(withIdentifier: "CreateDr")
                   second!.modalPresentationStyle = .fullScreen
@@ -73,15 +71,6 @@ class CreateAccountVC: UIViewController , UITextFieldDelegate {
     }
     
     func uploadDataToFireBasePt(){
-
-//        db.collection("Patient").document(Auth.auth().currentUser!.uid).setData([
-//
-//            "id":Auth.auth().currentUser!.uid,
-//              "ptName" : self.nameTextField.text!,
-//              "ptEmail":self.emailTextField.text!,
-//               "ptPassword" : self.passwordTextField.text!,
-//                "isPatient" : true
-//        ])
         
         db.collection("Patient").addDocument(data: [
 
@@ -111,12 +100,6 @@ class CreateAccountVC: UIViewController , UITextFieldDelegate {
 //            return true
 //        }
     //
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if segue.identifier == "moveToTimeLine"{
-    //            let vc = ProfileVC()
-    //            vc.name = nameTextField.text ?? "name no found "
-    //            vc.email = emailTextField.text ?? "email no found "
-    //        }
-    //    }
+  
 }
 

@@ -28,58 +28,12 @@ class DoctorsVC: UIViewController {
     
     
     
+    @IBAction func backButton(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePage")
+                vc!.modalPresentationStyle = .fullScreen
+               self.present(vc!, animated: true, completion: nil)
+    }
     
-//    func getDataFromFireBase(){
-//        print(Auth.auth().currentUser!.uid)
-//        db.collection("Nutritionist").addSnapshotListener { QuerySnapshot, error in
-//
-//
-//            if let error = error{
-//                print(error)
-//            }
-//            else{
-//                for doc in QuerySnapshot!.documents{
-//                    let data = doc.data()
-//                    let nameDoctor = data["drName"] as? String ?? ""
-//                    let desDoctor = data ["description"] as? String ?? ""
-//                    let costDoctor = data ["cost"] as? String ?? ""
-//                    let imgStr = data ["icon"] as? Data ?? Data()
-//
-////
-////                    self.nameDr.text = nameDoctor
-////                    self.textArea.text = desDoctor
-////                    self.cost.text = costDoctor
-////                    self.imageProfiile.image = UIImage(data: imgStr)
-////
-//
-//
-//                }
-//            }
-//
-//        }
-//
-//    }
-    
-    
-//    func getDataFromFireBase(){
-//
-//        db.collection("Nutritionist")
-//            .getDocuments { QuerySnapshot, error in
-//                if error == nil {
-//                    QuerySnapshot?.documents.forEach({ QueryDocumentSnapshot in
-//
-//                        let nameDoctor : String = ((QueryDocumentSnapshot.get("drName")as? String ?? " notFound "))
-//                        let desDoctor : String = ((QueryDocumentSnapshot.get("description")as? String  ?? "notFound"))
-//                        let costDoctor : String = ((QueryDocumentSnapshot.get("cost")as? String ?? "notFound" ))
-//
-//                        self.drArray.append(Doctor(id: "", drName: nameDoctor, email: "", icon: Data(), gender: "", certification: "", experience: "", description: desDoctor, cost: costDoctor, bankName: ""))
-//
-//                    })
-//                    self.tableView.reloadData()
-//
-//                }
-//            }
-//    }
     
     
     func getDataDrFromFireBase(){

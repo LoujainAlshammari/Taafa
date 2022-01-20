@@ -18,7 +18,6 @@
 		4D1CB63B2780E1200049AEB8 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB63A2780E1200049AEB8 /* HomeCell.swift */; };
 		4D1CB6402780EBC90049AEB8 /* NutritionClinicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB63F2780EBC90049AEB8 /* NutritionClinicsCell.swift */; };
 		4D1CB6422780EC280049AEB8 /* NutritionClinics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB6412780EC280049AEB8 /* NutritionClinics.swift */; };
-		4D1CB6442780EC4A0049AEB8 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB6432780EC4A0049AEB8 /* Sections.swift */; };
 		4D1CB6462781865A0049AEB8 /* Clinics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB6452781865A0049AEB8 /* Clinics.swift */; };
 		4D1CB648278186FD0049AEB8 /* SectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB647278186FD0049AEB8 /* SectionsVC.swift */; };
 		4D1CB64A278187160049AEB8 /* SectionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB649278187160049AEB8 /* SectionsCell.swift */; };
@@ -26,6 +25,9 @@
 		4D1CB64E2782B13D0049AEB8 /* DoctorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB64D2782B13D0049AEB8 /* DoctorsVC.swift */; };
 		4D1CB670278337810049AEB8 /* ConsultationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB66F278337800049AEB8 /* ConsultationVC.swift */; };
 		4D1CB6722783863E0049AEB8 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB6712783863D0049AEB8 /* testViewController.swift */; };
+		4D2361ED27999C0600581F3F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2361EC27999C0600581F3F /* FirebaseFirestore */; };
+		4D2361EF27999C1F00581F3F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2361EE27999C1F00581F3F /* FirebaseAuth */; };
+		4D2361F127999C2900581F3F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2361F027999C2900581F3F /* FirebaseStorage */; };
 		4D2F463827860955001A767D /* CreateAccountDr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F463727860955001A767D /* CreateAccountDr.swift */; };
 		4D2F463A27876744001A767D /* HomePageDrVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F463927876744001A767D /* HomePageDrVC.swift */; };
 		4D54AAF8279553F500D4A190 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54AAF7279553F500D4A190 /* EditProfileVC.swift */; };
@@ -33,9 +35,6 @@
 		4D54AAFC27957E3400D4A190 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54AAFB27957E3400D4A190 /* Appointment.swift */; };
 		4D54AAFE2795809300D4A190 /* AppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54AAFD2795809300D4A190 /* AppointmentCell.swift */; };
 		4D6F8B5827968B6B008F86AF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F8B5727968B6B008F86AF /* Message.swift */; };
-		4DB1524D27883DAD00FC804A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB1524C27883DAD00FC804A /* FirebaseAuth */; };
-		4DB1524F27883DBD00FC804A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB1524E27883DBD00FC804A /* FirebaseFirestore */; };
-		4DB1525127883DD800FC804A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB1525027883DD800FC804A /* FirebaseStorage */; };
 		4DB15253278B4E6500FC804A /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB15252278B4E6500FC804A /* Doctor.swift */; };
 		4DB15255278B526500FC804A /* DoctorProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB15254278B526500FC804A /* DoctorProfileVC.swift */; };
 		4DB15258278C15A000FC804A /* HomePageDrCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB15257278C15A000FC804A /* HomePageDrCell.swift */; };
@@ -72,7 +71,6 @@
 		4D1CB63A2780E1200049AEB8 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		4D1CB63F2780EBC90049AEB8 /* NutritionClinicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionClinicsCell.swift; sourceTree = "<group>"; };
 		4D1CB6412780EC280049AEB8 /* NutritionClinics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionClinics.swift; sourceTree = "<group>"; };
-		4D1CB6432780EC4A0049AEB8 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		4D1CB6452781865A0049AEB8 /* Clinics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinics.swift; sourceTree = "<group>"; };
 		4D1CB647278186FD0049AEB8 /* SectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsVC.swift; sourceTree = "<group>"; };
 		4D1CB649278187160049AEB8 /* SectionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCell.swift; sourceTree = "<group>"; };
@@ -118,9 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DB1524D27883DAD00FC804A /* FirebaseAuth in Frameworks */,
-				4DB1524F27883DBD00FC804A /* FirebaseFirestore in Frameworks */,
-				4DB1525127883DD800FC804A /* FirebaseStorage in Frameworks */,
+				4D2361ED27999C0600581F3F /* FirebaseFirestore in Frameworks */,
+				4D2361EF27999C1F00581F3F /* FirebaseAuth in Frameworks */,
+				4D2361F127999C2900581F3F /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +195,6 @@
 				4D1CB6452781865A0049AEB8 /* Clinics.swift */,
 				4DB15252278B4E6500FC804A /* Doctor.swift */,
 				4DB15259278D7F4E00FC804A /* Patient.swift */,
-				4D1CB6432780EC4A0049AEB8 /* Sections.swift */,
 				4D6F8B5727968B6B008F86AF /* Message.swift */,
 				4D54AAFB27957E3400D4A190 /* Appointment.swift */,
 			);
@@ -320,9 +317,9 @@
 			);
 			name = FinalProject;
 			packageProductDependencies = (
-				4DB1524C27883DAD00FC804A /* FirebaseAuth */,
-				4DB1524E27883DBD00FC804A /* FirebaseFirestore */,
-				4DB1525027883DD800FC804A /* FirebaseStorage */,
+				4D2361EC27999C0600581F3F /* FirebaseFirestore */,
+				4D2361EE27999C1F00581F3F /* FirebaseAuth */,
+				4D2361F027999C2900581F3F /* FirebaseStorage */,
 			);
 			productName = FinalProject;
 			productReference = 4DBE66FE2774AF1B008A5084 /* FinalProject.app */;
@@ -407,7 +404,6 @@
 				4D54AAFE2795809300D4A190 /* AppointmentCell.swift in Sources */,
 				4D54AAFA27957DBF00D4A190 /* AppointmentVC.swift in Sources */,
 				4D1CB670278337810049AEB8 /* ConsultationVC.swift in Sources */,
-				4D1CB6442780EC4A0049AEB8 /* Sections.swift in Sources */,
 				4DB30ADA279727FB003AB99D /* DrVC.swift in Sources */,
 				4D1C9D4527858DD6008A1388 /* ProfileVC.swift in Sources */,
 				4D1CB6422780EC280049AEB8 /* NutritionClinics.swift in Sources */,
@@ -662,17 +658,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4DB1524C27883DAD00FC804A /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4D147DC52780630000DA393E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		4DB1524E27883DBD00FC804A /* FirebaseFirestore */ = {
+		4D2361EC27999C0600581F3F /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4D147DC52780630000DA393E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		4DB1525027883DD800FC804A /* FirebaseStorage */ = {
+		4D2361EE27999C1F00581F3F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D147DC52780630000DA393E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4D2361F027999C2900581F3F /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4D147DC52780630000DA393E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
