@@ -377,7 +377,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="314" id="v5R-VJ-eRF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم المستخدم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IY5-t6-cZI">
                                         <rect key="frame" x="100" y="40" width="253" height="21"/>
@@ -2420,7 +2420,7 @@
                                                     <rect key="frame" x="91" y="24.5" width="281" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="9Df-2i-xbq"/>
-                                                        <constraint firstAttribute="width" constant="281" id="l5a-dk-juA"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="281" id="l5a-dk-juA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
@@ -2430,7 +2430,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="bAi-8d-rdC" secondAttribute="trailing" constant="42" id="0nW-bg-Udn"/>
                                                 <constraint firstItem="bAi-8d-rdC" firstAttribute="top" secondItem="09N-qt-37y" secondAttribute="top" constant="24.5" id="2dd-a7-aOs"/>
-                                                <constraint firstItem="bAi-8d-rdC" firstAttribute="leading" secondItem="09N-qt-37y" secondAttribute="leading" constant="91" id="VvC-Jf-kob"/>
+                                                <constraint firstItem="bAi-8d-rdC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="09N-qt-37y" secondAttribute="leading" symbolic="YES" id="VvC-Jf-kob"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="ColorBackground"/>
@@ -3026,7 +3026,7 @@
                                 <rect key="frame" x="128" y="46" width="158" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="EFl-hn-u9S"/>
-                                    <constraint firstAttribute="width" constant="158" id="zJv-hx-WaQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="158" id="zJv-hx-WaQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -3035,7 +3035,7 @@
                         </subviews>
                         <color key="backgroundColor" name="ColorBackground"/>
                         <constraints>
-                            <constraint firstItem="dPv-z6-2LK" firstAttribute="leading" secondItem="kHl-hz-kZB" secondAttribute="trailing" constant="41" id="08D-c4-b5b"/>
+                            <constraint firstItem="dPv-z6-2LK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kHl-hz-kZB" secondAttribute="trailing" symbolic="YES" id="08D-c4-b5b"/>
                             <constraint firstAttribute="trailing" secondItem="dPv-z6-2LK" secondAttribute="trailing" constant="128" id="37c-Ah-kow"/>
                             <constraint firstAttribute="trailing" secondItem="IGE-38-ufO" secondAttribute="trailing" id="7yx-z9-Jhp"/>
                             <constraint firstItem="IGE-38-ufO" firstAttribute="top" secondItem="kHl-hz-kZB" secondAttribute="bottom" constant="8" id="Fyw-Wn-W0G"/>
@@ -3170,6 +3170,7 @@
                     <tabBarItem key="tabBarItem" title="Item" image="ellipsis" catalog="system" id="U1r-Bm-G4N"/>
                     <connections>
                         <outlet property="darkLight" destination="JTa-sG-CJO" id="2Cs-eY-fgm"/>
+                        <outlet property="viewMorePage" destination="VLe-Se-SBD" id="tVm-T8-sd1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPv-MA-8Wb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

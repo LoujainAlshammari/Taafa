@@ -79,14 +79,14 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: Any) {
-        uploadDataToFireBasePt()
+        updateDataToFireBasePt()
         let alert = UIAlertController(title: "حفظ" , message: "تم حفظ البيانات بنجاح", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "حسناً", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     
-    func uploadDataToFireBasePt(){
+    func updateDataToFireBasePt(){
 
         let newData = [
             "id":Auth.auth().currentUser!.uid,

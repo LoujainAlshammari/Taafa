@@ -61,6 +61,8 @@ class CreateAccountDr: UIViewController {
         buttonCreate.layer.cornerRadius = 10
         imageProfileDr.layer.cornerRadius = 15
         
+        hideKeyboardWhenTappedAround()
+        
     }
     
    
@@ -156,6 +158,17 @@ class CreateAccountDr: UIViewController {
         }
         
     }
+    
+    func hideKeyboardWhenTappedAround() {
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            tap.cancelsTouchesInView = false
+            view.addGestureRecognizer(tap)
+        }
+        
+        @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
     
     
 }

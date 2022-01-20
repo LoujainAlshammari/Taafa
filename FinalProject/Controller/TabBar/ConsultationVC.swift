@@ -45,16 +45,13 @@ class ConsultationVC: UIViewController  {
         pickerDuration.tag = 1
         createDatePicker()
         createTimePicker()
-        
-        
     }
+    
     @IBAction func durationButtonAct(_ sender: Any) {
         if pickerDuration.isHidden{
             pickerDuration.isHidden = false
         }
     }
-    
-    
     
     
     @IBAction func backButton(_ sender: Any) {

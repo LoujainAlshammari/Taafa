@@ -21,6 +21,7 @@ class CreateAccountVC: UIViewController , UITextFieldDelegate {
         super.viewDidLoad()
         viewSignUp.layer.cornerRadius = 30
         buttonSignUp.layer.cornerRadius = 10
+        hideKeyboardWhenTappedAround()
     }
 
     
@@ -94,12 +95,17 @@ class CreateAccountVC: UIViewController , UITextFieldDelegate {
     
     
     
-//    
-//        func hideKeyboardWhenTappedAround(_ textField: UITextField) -> Bool {
-//            nameTextField.resignFirstResponder()
-//            return true
-//        }
-    //
+    func hideKeyboardWhenTappedAround() {
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            tap.cancelsTouchesInView = false
+            view.addGestureRecognizer(tap)
+        }
+        
+        @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
+    
   
 }
 

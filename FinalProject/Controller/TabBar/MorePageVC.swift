@@ -10,10 +10,14 @@ import Firebase
 
 class MorePageVC: UIViewController {
     var defaults = UserDefaults.standard
-
+    
+    @IBOutlet weak var viewMorePage: UIView!
+    
     @IBOutlet weak var darkLight: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewMorePage.layer.cornerRadius = 30
 
     }
     
