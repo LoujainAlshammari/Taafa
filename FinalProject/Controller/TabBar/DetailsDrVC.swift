@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 
 class DetailsDrVC: UIViewController {
+    
     var drObj: Doctor?
     let db = Firestore.firestore()
 
@@ -31,12 +32,6 @@ class DetailsDrVC: UIViewController {
 
     }
     
-  
-    
-
-    
-  
-    
     @IBAction func backButton(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePage")
                 vc!.modalPresentationStyle = .fullScreen
@@ -51,9 +46,5 @@ class DetailsDrVC: UIViewController {
 
     }
     
-
-    
-    
-  
 
 }

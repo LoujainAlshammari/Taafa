@@ -9,6 +9,7 @@ import Foundation
 
 
 struct Patient{
+    
     var id : String
     var ptName :String
     var ptEmail :String

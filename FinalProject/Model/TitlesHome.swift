@@ -8,7 +8,6 @@
 import Foundation
 
 struct Titles {
-    var name:String
     
-
+    var name:String
 }

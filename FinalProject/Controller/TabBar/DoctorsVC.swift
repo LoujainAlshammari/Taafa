@@ -7,15 +7,14 @@
 
 import UIKit
 import Firebase
+
 class DoctorsVC: UIViewController {
 
     var drArray : [Doctor] = []
     let db = Firestore.firestore()
     
-//    let imagePicker = UIImagePickerController()
-//    var updateimageName = "\(UUID().uuidString).png"
-    
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -72,12 +71,12 @@ extension DoctorsVC : UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DoctorsCell
         cell.imageProfiile.image = UIImage(data: drArray[indexPath.row].icon)
         cell.doctorName.text = drArray[indexPath.row].drName
         cell.descriptionDoctor.text = drArray[indexPath.row].description
         cell.info.text =  drArray[indexPath.row].cost
-        
         
                 return cell
 

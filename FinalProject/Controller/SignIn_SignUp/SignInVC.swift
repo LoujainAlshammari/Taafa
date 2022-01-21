@@ -7,25 +7,23 @@
 
 import UIKit
 import Firebase
+
 class SignInVC: UIViewController {
     
+    let db = Firestore.firestore()
+
     @IBOutlet weak var viewSignIn: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var buttonSignIn: UIButton!
-    let db = Firestore.firestore()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewSignIn.layer.cornerRadius = 30
         emailTextField.layer.cornerRadius = 60
         passwordTextField.layer.cornerRadius = 25
         buttonSignIn.layer.cornerRadius = 10
-        
-        emailTextField.text = "abdullah@gmail.com"
-        passwordTextField.text = "1234567"
         
     }
     
@@ -60,6 +58,7 @@ class SignInVC: UIViewController {
                         self.present(vc!, animated: true, completion: nil)
                         
                     }else{
+                        
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePage")
                     vc!.modalPresentationStyle = .fullScreen
                         print("idddddddd",Auth.auth().currentUser!.uid)
@@ -70,17 +69,18 @@ class SignInVC: UIViewController {
                    
                     }
                 }else {
+                    
                     let alert = UIAlertController(title: "تنبيه", message: "كلمة المرور غير صالحة أو ليس لدى المستخدم كلمة مرور", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "حسناً", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }
                 })
         }else {
+            
             let alert = UIAlertController(title: "بيانات ناقصة", message: "الرجاء التأكد من إدخال البريد الإلكتروني و كلمة المرور", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "حسناً", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
      }
-   }
-
-
+ 
+}

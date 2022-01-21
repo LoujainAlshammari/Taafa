@@ -13,5 +13,4 @@ struct Appointment {
     var duration : String
     var time : String
     var date : String
-    
 }

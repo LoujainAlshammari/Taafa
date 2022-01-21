@@ -6,8 +6,9 @@
 
 import UIKit
 import Firebase
-class ChattingVC: UIViewController {
 
+class ChattingVC: UIViewController {
+    
     var messages : [Message] = []
     var drsObj: SelectDrs?
     var id : String = ""
@@ -20,16 +21,17 @@ class ChattingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         getMessage()
         hideKeyboardWhenTappedAround()
     }
     
- 
-       @IBAction func sendButtonClicked(_ sender: Any) {
-           sendMessage()
-       }
+    
+    @IBAction func sendButtonClicked(_ sender: Any) {
+        sendMessage()
+    }
     
     func sendMessage(){
         
@@ -48,13 +50,10 @@ class ChattingVC: UIViewController {
         
         getMessage()
     }
-     
+    
     
     func getMessage(){
-           
-        
-        
-        
+
         db.collection("Patient").document(myId!)
             .collection("Message").document(self.id).collection("msg")
             .order(by: "time")
@@ -73,17 +72,15 @@ class ChattingVC: UIViewController {
                                 let fetchedMessage = Message(idM: id, message: content)
                                 self.messages.append(fetchedMessage)
                                 print("############",self.messages)
-                                //   DispatchQueue.main.async {
                                 self.tableView.reloadData()
-                                //   }
                                 let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
                                 self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
                 }
-            }
-        }
+           }
+      }
     
     @IBAction func backButton(_ sender: Any) {
         
@@ -93,27 +90,25 @@ class ChattingVC: UIViewController {
             self.present(vc!, animated: true, completion: nil)
             
         }else{
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "drVC")
-        vc!.modalPresentationStyle = .fullScreen
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "drVC")
+            vc!.modalPresentationStyle = .fullScreen
             print("idddddddd",Auth.auth().currentUser!.uid)
-        self.present(vc!, animated: true, completion: nil)
-      
+            self.present(vc!, animated: true, completion: nil)
+            
         }
-        
-        
-        
     }
     
     func hideKeyboardWhenTappedAround() {
-            
-            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-            tap.cancelsTouchesInView = false
-            view.addGestureRecognizer(tap)
-        }
         
-        @objc func dismissKeyboard() {
-            view.endEditing(true)
-        }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     
 }

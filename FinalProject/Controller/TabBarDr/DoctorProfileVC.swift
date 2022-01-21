@@ -8,14 +8,15 @@
 import UIKit
 import Firebase
 class DoctorProfileVC: UIViewController {
+    
+    let userId = Auth.auth().currentUser?.uid
+    let imagePicker = UIImagePickerController()
+    var updateimageName = "\(UUID().uuidString).png"
     let db = Firestore.firestore()
-//    var doctorInfo : Doctor? = nil
     var drInfo : [Doctor] = []
-
     
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
-    
     @IBOutlet weak var thirdView: UIView!
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var nameDr: UILabel!
@@ -28,13 +29,9 @@ class DoctorProfileVC: UIViewController {
     @IBOutlet weak var bankName: UILabel!
     @IBOutlet weak var ibanDr: UILabel!
     
-    let imagePicker = UIImagePickerController()
-    var updateimageName = "\(UUID().uuidString).png"
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         getDataFromFireBase()
-        
         firstView.layer.cornerRadius = 30
         secondView.layer.cornerRadius = 30
         thirdView.layer.cornerRadius = 30
@@ -63,7 +60,6 @@ class DoctorProfileVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    let userId = Auth.auth().currentUser?.uid
 
     
     func getDataFromFireBase(){
@@ -98,9 +94,7 @@ class DoctorProfileVC: UIViewController {
                     self.bankName.text = bankNameDr
                     self.ibanDr.text = iban
                     self.imgProfile.image = UIImage(data: imgStr)
-                    
-                    
-                    
+ 
                 }
             }
             
@@ -164,6 +158,3 @@ extension DoctorProfileVC: UIImagePickerControllerDelegate & UINavigationControl
     picker.dismiss(animated: true, completion: nil)
   }
 }
-
-
-

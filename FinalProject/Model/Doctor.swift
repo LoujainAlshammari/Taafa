@@ -21,6 +21,5 @@ struct Doctor {
     var description : String
     var cost : String
     var bankName : String?
-    
 }
 

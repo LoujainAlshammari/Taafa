@@ -7,13 +7,13 @@
 
 import UIKit
 import Firebase
+
 class ApptPatientVC: UIViewController {
     
-    var apptPatientArray : [Appointment] = []
-    
-    var Ptobj : [Patient] = []
     let db = Firestore.firestore()
-
+    var apptPatientArray : [Appointment] = []
+    var Ptobj : [Patient] = []
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class ApptPatientVC: UIViewController {
         self.tableView.reloadData()
     }
     
-
+    
     func getDataFromFireBase(){
         
         print(Auth.auth().currentUser!.uid)
@@ -36,7 +36,7 @@ class ApptPatientVC: UIViewController {
                 for document in querySnapshot!.documents{
                     print("=====")
                     let data = document.data()
-                     id = data["id"] as? String ?? ""
+                    id = data["id"] as? String ?? ""
                     print("?????///",id)
                     print(document.data())
                     self.apptPatientArray.append(Appointment(id: "", duration: data["duration"] as? String ?? "",
@@ -47,23 +47,21 @@ class ApptPatientVC: UIViewController {
                         if let error = error{
                             print(error)
                         }else{
+                            
                             for doc in querySnapshot!.documents{
                                 let data = doc.data()
                                 let namePt = data["ptName"] as? String ?? ""
                                 let heigtPt = data["height"] as? String ?? ""
                                 let weightPt = data["weight"] as? String ?? ""
-                                
                                 self.Ptobj.append(Patient(id: "", ptName: namePt, ptEmail: "", gender: "", height: heigtPt, weight: weightPt))
                             }
                         }
                     }
                 }
-          
-                
             }
         }
     }
-
+    
 }
 
 extension ApptPatientVC : UITableViewDelegate , UITableViewDataSource {
@@ -74,13 +72,12 @@ extension ApptPatientVC : UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ApptPatientCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ApptPatientCell
+        
         cell.namePt.text = apptPatientArray[indexPath.row].duration
+        return cell
         
-        
-                return cell
-
-      }
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
@@ -96,6 +93,6 @@ extension ApptPatientVC : UITableViewDelegate , UITableViewDataSource {
         present(nextVC, animated: true){
         }
     }
-
-   
+    
+    
 }

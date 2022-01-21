@@ -24,7 +24,6 @@
 		4D1CB64C2782B0D90049AEB8 /* DoctorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB64B2782B0D90049AEB8 /* DoctorsCell.swift */; };
 		4D1CB64E2782B13D0049AEB8 /* DoctorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB64D2782B13D0049AEB8 /* DoctorsVC.swift */; };
 		4D1CB670278337810049AEB8 /* ConsultationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB66F278337800049AEB8 /* ConsultationVC.swift */; };
-		4D1CB6722783863E0049AEB8 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CB6712783863D0049AEB8 /* testViewController.swift */; };
 		4D2361ED27999C0600581F3F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2361EC27999C0600581F3F /* FirebaseFirestore */; };
 		4D2361EF27999C1F00581F3F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2361EE27999C1F00581F3F /* FirebaseAuth */; };
 		4D2361F127999C2900581F3F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2361F027999C2900581F3F /* FirebaseStorage */; };
@@ -77,7 +76,6 @@
 		4D1CB64B2782B0D90049AEB8 /* DoctorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsCell.swift; sourceTree = "<group>"; };
 		4D1CB64D2782B13D0049AEB8 /* DoctorsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsVC.swift; sourceTree = "<group>"; };
 		4D1CB66F278337800049AEB8 /* ConsultationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationVC.swift; sourceTree = "<group>"; };
-		4D1CB6712783863D0049AEB8 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		4D2F463727860955001A767D /* CreateAccountDr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountDr.swift; sourceTree = "<group>"; };
 		4D2F463927876744001A767D /* HomePageDrVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageDrVC.swift; sourceTree = "<group>"; };
 		4D54AAF7279553F500D4A190 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
@@ -125,13 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D07BECA27883A7A0004DACE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4D147DD927809A9A00DA393E /* SignIn_SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +181,7 @@
 		4D1CB63D2780E9C20049AEB8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4DF977782792E63F00F6E4A5 /* Extensions */,
 				4DB30ADD27972C73003AB99D /* SelectDrs.swift */,
 				4D1CB6342780DF600049AEB8 /* TitlesHome.swift */,
 				4D1CB6452781865A0049AEB8 /* Clinics.swift */,
@@ -204,6 +196,7 @@
 		4D1CB63E2780E9D30049AEB8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				4DF9777D2792EBC800F6E4A5 /* OnboardingCVCell.swift */,
 				4DB30ADB27972846003AB99D /* DrCell.swift */,
 				4DC81D342797B7B800936D9B /* ApptPatientCell.swift */,
 				4D54AAFD2795809300D4A190 /* AppointmentCell.swift */,
@@ -233,7 +226,6 @@
 			children = (
 				4DBE67002774AF1B008A5084 /* FinalProject */,
 				4DBE66FF2774AF1B008A5084 /* Products */,
-				4D07BECA27883A7A0004DACE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,7 +243,6 @@
 				4DC2F9202799655700279CBA /* Controller */,
 				4DC2F91F2799652400279CBA /* View */,
 				4D1CB63D2780E9C20049AEB8 /* Model */,
-				4D1CB6712783863D0049AEB8 /* testViewController.swift */,
 				4D147DDA27809BB600DA393E /* App And Scene Delegate */,
 				4DBE670F2774AF1F008A5084 /* Info.plist */,
 				4D147DC32780626E00DA393E /* GoogleService-Info.plist */,
@@ -272,11 +263,11 @@
 		4DC2F9202799655700279CBA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4D1CB63E2780E9D30049AEB8 /* Cell */,
-				4DB15256278B56BF00FC804A /* TabBarDr */,
-				4D1CB63C2780E9920049AEB8 /* TabBar */,
-				4D147DD927809A9A00DA393E /* SignIn_SignUp */,
 				4DF977752792E3BE00F6E4A5 /* intro */,
+				4D147DD927809A9A00DA393E /* SignIn_SignUp */,
+				4D1CB63C2780E9920049AEB8 /* TabBar */,
+				4DB15256278B56BF00FC804A /* TabBarDr */,
+				4D1CB63E2780E9D30049AEB8 /* Cell */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,8 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				4DF977762792E3FF00F6E4A5 /* OnboardingVC.swift */,
-				4DF9777D2792EBC800F6E4A5 /* OnboardingCVCell.swift */,
-				4DF977782792E63F00F6E4A5 /* Extensions */,
 			);
 			path = intro;
 			sourceTree = "<group>";
@@ -417,7 +406,6 @@
 				4D1C9D4327858A3D008A1388 /* MorePageVC.swift in Sources */,
 				4DBE67022774AF1B008A5084 /* AppDelegate.swift in Sources */,
 				4DB15255278B526500FC804A /* DoctorProfileVC.swift in Sources */,
-				4D1CB6722783863E0049AEB8 /* testViewController.swift in Sources */,
 				4D2F463A27876744001A767D /* HomePageDrVC.swift in Sources */,
 				4D1CB63B2780E1200049AEB8 /* HomeCell.swift in Sources */,
 				4D1CB6402780EBC90049AEB8 /* NutritionClinicsCell.swift in Sources */,
@@ -577,6 +565,8 @@
 				DEVELOPMENT_TEAM = VKAK76593C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "تَعافَى";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "we use the photos to upload to the cloud";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -605,6 +595,8 @@
 				DEVELOPMENT_TEAM = VKAK76593C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "تَعافَى";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "we use the photos to upload to the cloud";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

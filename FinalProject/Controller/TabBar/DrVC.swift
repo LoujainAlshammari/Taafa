@@ -9,8 +9,6 @@ import UIKit
 import Firebase
 
 class DrVC: UIViewController {
-
-    
     
     var drsArray : [SelectDrs] = []
     let db = Firestore.firestore()
@@ -18,11 +16,19 @@ class DrVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         getDataFromFireBase()
         self.tableView.reloadData()
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePage")
+        vc!.modalPresentationStyle = .fullScreen
+        self.present(vc!, animated: true, completion: nil)
     }
     
     func getDataFromFireBase(){
@@ -40,17 +46,7 @@ class DrVC: UIViewController {
                     self.tableView.reloadData()
                     
                 }
-                
-                
             }
-    }
-
-  
-    @IBAction func backButton(_ sender: Any) {
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePage")
-        vc!.modalPresentationStyle = .fullScreen
-        self.present(vc!, animated: true, completion: nil)
     }
     
     
@@ -63,17 +59,12 @@ extension DrVC : UITableViewDelegate , UITableViewDataSource {
         return drsArray.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "drsCell", for: indexPath) as! DrCell
-        
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "drsCell", for: indexPath) as! DrCell
         cell.nameDr.text = drsArray[indexPath.row].nameDr
+        return cell
         
-        
-                return cell
-
-      }
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200

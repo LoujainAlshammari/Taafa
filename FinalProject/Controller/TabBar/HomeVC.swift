@@ -5,6 +5,7 @@
 //
 
 import UIKit
+
 class HomeVC: UIViewController {
 
     var titles = [

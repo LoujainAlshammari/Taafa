@@ -10,18 +10,15 @@ import UIKit
 class DrCell: UITableViewCell {
 
     @IBOutlet weak var nameDr: UILabel!
-    
     @IBOutlet weak var viewDrs: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         viewDrs.cornerRadius = 30
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

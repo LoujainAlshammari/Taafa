@@ -21,7 +21,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>we use the photos to upload to the cloud</string>
 </dict>
 </plist>

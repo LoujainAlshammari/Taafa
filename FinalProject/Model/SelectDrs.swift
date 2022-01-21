@@ -9,6 +9,7 @@ import Foundation
   
 
 struct SelectDrs{
+    
     var idDr : String
     var nameDr : String
 }

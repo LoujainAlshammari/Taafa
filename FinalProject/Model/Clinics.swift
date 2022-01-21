@@ -12,5 +12,5 @@ struct Clinics{
     var clinicName:String
     var nutritionistsName: String?
     var location :String
-   
+    var phone : String
 }
