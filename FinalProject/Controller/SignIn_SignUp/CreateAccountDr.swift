@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import Photos
+import MessageUI
 
 class CreateAccountDr: UIViewController {
     
@@ -59,6 +60,8 @@ class CreateAccountDr: UIViewController {
         buttonCreate.layer.cornerRadius = 10
         imageProfileDr.layer.cornerRadius = 15
         
+        experience.keyboardType = .numberPad
+        cost.keyboardType = .numberPad
         hideKeyboardWhenTappedAround()
         
     }
@@ -189,6 +192,24 @@ class CreateAccountDr: UIViewController {
                 return false
                 
                 
+                
+            }
+                if !email.text!.contains("@taafa.com") {
+                    let alert = UIAlertController(title: "تنبيه", message: "المجال غير مطابق", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "حسناً", style: .default, handler: { (_) in
+                        self.sendEmail()
+                    }))
+                    present(alert, animated: true, completion: nil)
+                    
+                    return false
+                
+            }else if email.text! == "@taafa.com" {
+
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomePageDrVC")
+            vc!.modalPresentationStyle = .fullScreen
+            self.present(vc!, animated: true, completion: nil)
+                return false
+            
             }else if certification.text!.isEmpty {
                 
                 let alert = UIAlertController(title: "تنبيه", message: "لم تقم بأدخال المؤهل الدراسي ", preferredStyle: .alert)
@@ -219,18 +240,13 @@ class CreateAccountDr: UIViewController {
                 
                 return false
                 
-            }else if cost.text! > "300"{
-                
-                let alert = UIAlertController(title: "تنبيه", message:"تكلفة الاستشارة اكبر من 300", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "حسناً", style: .default, handler: nil))
-                present(alert, animated: true, completion: nil)
-                
-                return false
+
                 
             }else if description1.text!.isEmpty {
                 
                 let alert = UIAlertController(title: "تنبيه", message:"لم تقم بأدخل وصف ", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "حسناً", style: .default, handler: nil))
+                
                 present(alert, animated: true, completion: nil)
                 
                 return false
@@ -246,7 +262,9 @@ class CreateAccountDr: UIViewController {
             }else if iban.text!.isEmpty {
                 
                 let alert = UIAlertController(title: "تنبيه", message:"لم تقم بأدخل الايبان", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "حسناً", style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: "حسناً", style: .default, handler: { _ in
+                    
+                }))
                 present(alert, animated: true, completion: nil)
                 
                 return false
@@ -255,6 +273,40 @@ class CreateAccountDr: UIViewController {
         
             return true
         }
+    
+    
+    @IBAction func sendEmail(_ sender: Any) {
+        
+//        if let url = URL(string: "mailto:\("loujain09@gmail.com")") {
+//                   if #available(iOS 10.0, *) {
+//                       UIApplication.shared.open(url)
+//                   } else {
+//                       UIApplication.shared.openURL(url)
+//                   }
+//               }
+        
+        
+        
+        sendEmail()
+    }
+    func sendEmail(){
+        if MFMailComposeViewController.canSendMail() {
+        let composeVC = MFMailComposeViewController()
+//        composeVC.mailComposeDelegate = self
+
+        composeVC.setToRecipients(["loujain09@gmail.com"])
+        composeVC.setSubject("طلب بريد الالكتروني")
+        composeVC.setMessageBody("السلام عليكم ورحمة الله اريد طلب ايميل اخصائي تغذية  ", isHTML: false)
+
+        self.present(composeVC, animated: true, completion: nil)
+
+        } else {
+
+            print("Cannot send mail")
+
+        }
+    }
+    
     
 }
 

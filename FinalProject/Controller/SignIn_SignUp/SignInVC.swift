@@ -24,6 +24,10 @@ class SignInVC: UIViewController {
         emailTextField.layer.cornerRadius = 60
         passwordTextField.layer.cornerRadius = 25
         buttonSignIn.layer.cornerRadius = 10
+        hideKeyboardWhenTappedAround()
+        emailTextField.text = "loujain09@gmail.com"
+        passwordTextField.text = "1234567"
+        
         
     }
     
@@ -82,5 +86,17 @@ class SignInVC: UIViewController {
             present(alert, animated: true, completion: nil)
         }
      }
+    
+    
+    func hideKeyboardWhenTappedAround() {
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
  
 }

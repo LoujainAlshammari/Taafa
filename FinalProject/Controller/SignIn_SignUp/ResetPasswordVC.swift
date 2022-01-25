@@ -19,6 +19,8 @@ class ResetPasswordVC: UIViewController {
         viewResetPass.layer.cornerRadius = 20
         let user = Auth.auth().currentUser
         emailTextField.text = "\(user?.email ?? "email not found")"
+        
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func resetPassword(_ sender: Any) {
@@ -46,5 +48,17 @@ class ResetPasswordVC: UIViewController {
                self.present(vc!, animated: true, completion: nil)
 
 
+    }
+    
+    
+    func hideKeyboardWhenTappedAround() {
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

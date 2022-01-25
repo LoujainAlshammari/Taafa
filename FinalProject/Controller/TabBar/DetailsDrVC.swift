@@ -24,7 +24,17 @@ class DetailsDrVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewDetailsDr.cornerRadius = 30
+//        imageProfile.layer.cornerRadius = 40
+        
+        
+//        imageProfile.layer.borderWidth = 1
+//        imageProfile.layer.masksToBounds = false
+//        imageProfile.layer.borderColor = UIColor.black.cgColor
+//        imageProfile.layer.cornerRadius = self.frame.height / 2
+//        imageProfile.clipsToBounds = true
+        
         imageProfile.image = UIImage(data: drObj?.icon ?? Data())
+        
         name.text = drObj?.drName
         descriptionn.text = drObj?.description
         experience.text = drObj?.experience
@@ -48,3 +58,6 @@ class DetailsDrVC: UIViewController {
     
 
 }
+
+
+

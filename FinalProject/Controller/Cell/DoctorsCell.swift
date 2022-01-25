@@ -17,7 +17,7 @@ class DoctorsCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        viewDr.cornerRadius = 30
+        viewDr.cornerRadius = 15
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

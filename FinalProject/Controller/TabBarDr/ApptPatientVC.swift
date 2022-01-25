@@ -46,6 +46,7 @@ class ApptPatientVC: UIViewController {
                     self.db.collection("Patient").whereField("id", isEqualTo: id).getDocuments { querySnapshot, error in
                         if let error = error{
                             print(error)
+                            
                         }else{
                             
                             for doc in querySnapshot!.documents{
@@ -72,8 +73,8 @@ extension ApptPatientVC : UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ApptPatientCell
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ApptPatientCell
         cell.namePt.text = apptPatientArray[indexPath.row].duration
         return cell
         

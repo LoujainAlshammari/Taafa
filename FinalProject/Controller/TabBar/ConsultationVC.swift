@@ -70,7 +70,7 @@ class ConsultationVC: UIViewController  {
         dateTex.inputView = datePiicker
         datePiicker.datePickerMode = .date
         datePiicker.preferredDatePickerStyle = .inline
-        datePiicker.backgroundColor = .white
+        datePiicker.backgroundColor = #colorLiteral(red: 0.7008361816, green: 0.8273791671, blue: 0.842361629, alpha: 1)
         
     }
     
@@ -98,7 +98,7 @@ class ConsultationVC: UIViewController  {
         timeTex.inputView = timePiicker
         timePiicker.datePickerMode = .time
         timePiicker.preferredDatePickerStyle = .wheels
-        timePiicker.backgroundColor = .white
+        timePiicker.backgroundColor = #colorLiteral(red: 0.7008361816, green: 0.8273791671, blue: 0.842361629, alpha: 1)
         
         
     }
