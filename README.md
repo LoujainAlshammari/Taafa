@@ -12,10 +12,8 @@
 
 The idea of this project is to provide an easier for people to take nutrition appointments, and can talk with the appropriate specialist.
 
- <B>This app contains 2 types of user :- <B>
+ <B>This app contains 2 types of user  <B>
 
-- nutrition
-- Patient 
 
 ## Tools
 
